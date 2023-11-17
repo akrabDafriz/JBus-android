@@ -10,5 +10,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regisiter);
+        try{
+            getSupportActionBar().hide();
+        }catch(NullPointerException n){
+            n.printStackTrace();
+        }
+
     }
 }

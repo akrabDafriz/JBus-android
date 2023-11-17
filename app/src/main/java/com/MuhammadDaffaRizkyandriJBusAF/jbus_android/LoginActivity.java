@@ -27,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(v->{
             moveActivity(this, MainActivity.class);
         });
+        try{
+            getSupportActionBar().hide();
+        }catch(NullPointerException n){
+            n.printStackTrace();
+        }
     }
 
     private void moveActivity(Context ctx, Class<?> cls){
