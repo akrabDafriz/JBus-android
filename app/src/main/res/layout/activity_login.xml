@@ -7,107 +7,92 @@
     android:background="@drawable/bg"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="317dp"
-        android:layout_height="607dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
-        app:srcCompat="@drawable/edittextbg" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="319dp"
-        android:layout_height="818dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493"
-        app:srcCompat="@drawable/edittextbg" />
-
     <TextView
         android:id="@+id/titleJBus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/cottoncandy"
         android:text="JBus"
         android:textColor="#00A36C"
         android:textSize="96sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/buspng"
         android:layout_width="199dp"
         android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/titleJBus"
+        app:layout_constraintStart_toStartOf="@+id/titleJBus"
         app:layout_constraintTop_toBottomOf="@+id/titleJBus"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bus_clipart" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:ems="10"
+        android:fontFamily="@font/captainmeredith"
         android:gravity="center"
+        android:hint="email address"
         android:inputType="textEmailAddress"
-        android:text="email address"
         android:textColor="#00A36C"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintEnd_toEndOf="@+id/buspng"
+        app:layout_constraintStart_toStartOf="@+id/buspng"
+        app:layout_constraintTop_toBottomOf="@+id/buspng" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4682B4"
+        android:text="Log in"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="420dp"
         android:ems="10"
+        android:fontFamily="@font/captainmeredith"
         android:gravity="center"
+        android:hint="password"
         android:inputType="textPassword"
-        android:text="password"
         android:textColor="#00A36C"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
-    <Button
-        android:id="@+id/button"
-        android:backgroundTint="#4682B4"
+    <TextView
+        android:id="@+id/donthaveacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log in"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:layout_constraintVertical_bias="0.059" />
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Don't have an account?"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00000000"
-        android:text="Register"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.119"
-        tools:layout_editor_absoluteX="152dp" />
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Register Now"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/donthaveacc"
+        app:layout_constraintStart_toStartOf="@+id/donthaveacc"
+        app:layout_constraintTop_toBottomOf="@+id/donthaveacc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

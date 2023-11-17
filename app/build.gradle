@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.MuhammadDaffaRizkyandriJBusAF.jbus_android'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.MuhammadDaffaRizkyandriJBusAF.jbus_android"

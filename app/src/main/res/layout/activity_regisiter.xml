@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/titleJBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/cottoncandy"
+        android:text="JBus"
+        android:textColor="#00A36C"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/buspngreg"
+        android:layout_width="199dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/titleJBus"
+        app:layout_constraintStart_toStartOf="@+id/titleJBus"
+        app:layout_constraintTop_toBottomOf="@+id/titleJBus"
+        app:srcCompat="@drawable/bus_clipart" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="227dp"
+        android:layout_height="52dp"
+        android:bufferType="spannable"
+        android:ems="10"
+        android:fontFamily="@font/captainmeredith"
+        android:hint="  password"
+        android:inputType="textPassword"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailET"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailET"
+        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="227dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:fontFamily="@font/captainmeredith"
+        android:hint="  email address"
+        android:inputType="textEmailAddress"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="227dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="20"
+        android:fontFamily="@font/captainmeredith"
+        android:hint="  name"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/buspngreg"
+        app:layout_constraintStart_toStartOf="@+id/buspngreg"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cottoncandy"
+        android:text="Input username, email, and password"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cottoncandy"
+        android:text="Register your account"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/buspngreg"
+        app:layout_constraintStart_toStartOf="@+id/buspngreg"
+        app:layout_constraintTop_toBottomOf="@+id/buspngreg" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4682B4"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
