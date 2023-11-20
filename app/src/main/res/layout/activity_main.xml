@@ -1,47 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
+
     <TextView
         android:id="@+id/titleJBus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
         android:fontFamily="@font/cottoncandy"
         android:text="JBus"
         android:textColor="#00A36C"
         android:textSize="96sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        android:typeface="monospace" />
+
+    <RelativeLayout
+        android:id="@+id/listbg"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:layout_below="@id/buspngreg"
+        android:background="@drawable/rounded_edit_text"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFADD"
+        >
+        <ListView
+            android:id="@+id/busListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="20dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pagination_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/listbg">
+        <Button
+            android:id="@+id/prev_page"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFCC70"
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+            android:minHeight="0dp" />
+        <HorizontalScrollView
+            android:id="@+id/page_number_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:paddingHorizontal="18dp">
+            <LinearLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+        <Button
+            android:id="@+id/next_page"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFCC70"
+            android:drawableLeft="@drawable/baseline_arrow_forward_ios_24"
+            android:minHeight="0dp"/>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/buspngreg"
         android:layout_width="199dp"
         android:layout_height="72dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/titleJBus"
-        app:layout_constraintStart_toStartOf="@+id/titleJBus"
-        app:layout_constraintTop_toBottomOf="@+id/titleJBus"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/titleJBus"
         app:srcCompat="@drawable/bus_clipart" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="302dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="96dp"
-        android:fontFamily="@font/captainmeredith"
-        android:text="Bang gw lagi sedih bang"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buspngreg"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/buspngreg"
-        app:layout_constraintTop_toBottomOf="@+id/buspngreg"
-        app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
