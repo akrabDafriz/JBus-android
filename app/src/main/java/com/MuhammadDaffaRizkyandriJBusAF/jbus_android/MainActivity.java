@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(ctx, cls);
         startActivity(intent);
     }
-    private void Toast(Context ctx, String message){
+    private void viewToast(Context ctx, String message){
         Toast.makeText(ctx, message, Toast.LENGTH_SHORT).show();
     }
     private void paginationFooter() {
