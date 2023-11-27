@@ -25,7 +25,7 @@
         android:background="@drawable/circle"
         android:backgroundTint="#05B060"
         android:gravity="center"
-        android:text="P"
+        tools:text="P"
         android:textColor="@color/white"
         android:textSize="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,5 +124,76 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toStartOf="@+id/topUpButton"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/textBG1"
+        android:layout_width="269dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/topUpButton"
+        app:layout_constraintHorizontal_bias="0.521"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/topUpAmount"
+        app:layout_constraintTop_toBottomOf="@+id/topUpAmount"
+        app:srcCompat="@drawable/text_bg" />
+
+    <TextView
+        android:id="@+id/renter_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="You are already registered as a renter"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textBG1"
+        app:layout_constraintStart_toStartOf="@+id/textBG1"
+        app:layout_constraintTop_toTopOf="@+id/textBG1" />
+
+    <Button
+        android:id="@+id/manage_Bus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edit_text"
+        android:text="Manage Bus"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/renter_status"
+        app:layout_constraintStart_toStartOf="@+id/renter_status"
+        app:layout_constraintTop_toBottomOf="@+id/renter_status" />
+
+    <ImageView
+        android:id="@+id/textBG2"
+        android:layout_width="271dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="72dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/topUpButton"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/topUpAmount"
+        app:layout_constraintTop_toBottomOf="@+id/topUpAmount"
+        app:srcCompat="@drawable/text_bg" />
+
+    <TextView
+        android:id="@+id/renter_not_registered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="You are not registered as a renter"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textBG2"
+        app:layout_constraintStart_toStartOf="@+id/textBG2"
+        app:layout_constraintTop_toTopOf="@+id/textBG2" />
+
+    <TextView
+        android:id="@+id/register_renter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Register your Company"
+        android:visibility="visible"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/renter_not_registered"
+        app:layout_constraintStart_toStartOf="@+id/renter_not_registered"
+        app:layout_constraintTop_toBottomOf="@+id/renter_not_registered" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

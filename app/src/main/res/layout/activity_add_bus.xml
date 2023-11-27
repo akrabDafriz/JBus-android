@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AddBusActivity">
+
+    <TextView
+        android:id="@+id/addBusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Add Bus"
+        android:textColor="#00A36C"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addBusSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Add or edit your bus"
+        android:textColor="#00A36C"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/addBusTitle"
+        app:layout_constraintTop_toBottomOf="@+id/addBusTitle" />
+
+    <ImageView
+        android:id="@+id/background1"
+        android:layout_width="354dp"
+        android:layout_height="597dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/addBusSubTitle"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="@+id/addBusTitle"
+        app:layout_constraintTop_toBottomOf="@+id/addBusSubTitle"
+        app:srcCompat="@drawable/text_bg" />
+
+    <EditText
+        android:id="@+id/bus_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Bus Name"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBusSubTitle" />
+
+    <EditText
+        android:id="@+id/bus_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Capacity"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/bus_name"
+        app:layout_constraintTop_toBottomOf="@+id/bus_name" />
+
+    <EditText
+        android:id="@+id/bus_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Price"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/bus_capacity"
+        app:layout_constraintTop_toBottomOf="@+id/bus_capacity" />
+
+    <ImageView
+        android:id="@+id/departureVector"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/busVector"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/busVector"
+        app:layout_constraintTop_toTopOf="@+id/departureText"
+        app:srcCompat="@drawable/baseline_home_24" />
+
+    <TextView
+        android:id="@+id/busTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Bus Type"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/background1"
+        app:layout_constraintTop_toBottomOf="@+id/bus_price" />
+
+    <ImageView
+        android:id="@+id/busVector"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/busTypeText"
+        app:layout_constraintTop_toTopOf="@+id/busTypeText"
+        app:srcCompat="@drawable/baseline_directions_bus_24" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/busVector"
+        app:layout_constraintTop_toTopOf="@+id/busVector" />
+
+    <TextView
+        android:id="@+id/departureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Departure"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/busTypeText"
+        app:layout_constraintTop_toBottomOf="@+id/busTypeText" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/departureVector" />
+
+    <TextView
+        android:id="@+id/arrivalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Arrival"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/departureText"
+        app:layout_constraintTop_toBottomOf="@+id/departureText" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintTop_toTopOf="@+id/arrivalVector" />
+
+    <ImageView
+        android:id="@+id/arrivalVector"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/departureVector"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/departureVector"
+        app:layout_constraintTop_toTopOf="@+id/arrivalText"
+        app:srcCompat="@drawable/baseline_arrow_forward_24" />
+
+    <TextView
+        android:id="@+id/facilitiesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Facilities"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/arrivalText"
+        app:layout_constraintTop_toBottomOf="@+id/arrivalText" />
+
+    <CheckBox
+        android:id="@+id/lcd_tv_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LCD TV"
+        app:layout_constraintStart_toStartOf="@+id/ac_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/ac_checkbox" />
+
+    <CheckBox
+        android:id="@+id/ac_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="AC"
+        app:layout_constraintStart_toStartOf="@+id/background1"
+        app:layout_constraintTop_toBottomOf="@+id/facilitiesText" />
+
+    <CheckBox
+        android:id="@+id/electric_socket_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electric Socket"
+        app:layout_constraintStart_toStartOf="@+id/coolbox_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/coolbox_checkbox" />
+
+    <CheckBox
+        android:id="@+id/coolbox_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coolbox"
+        app:layout_constraintStart_toStartOf="@+id/wifi_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/wifi_checkbox" />
+
+    <CheckBox
+        android:id="@+id/wifi_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="WiFi"
+        app:layout_constraintStart_toEndOf="@+id/ac_checkbox"
+        app:layout_constraintTop_toTopOf="@+id/ac_checkbox" />
+
+    <CheckBox
+        android:id="@+id/large_baggage_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Baggage"
+        app:layout_constraintStart_toStartOf="@+id/lcd_tv_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/lcd_tv_checkbox" />
+
+    <CheckBox
+        android:id="@+id/toilet_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="Toilet"
+        app:layout_constraintStart_toEndOf="@+id/wifi_checkbox"
+        app:layout_constraintTop_toTopOf="@+id/wifi_checkbox" />
+
+    <CheckBox
+        android:id="@+id/lunch_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch"
+        app:layout_constraintStart_toStartOf="@+id/toilet_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/toilet_checkbox" />
+
+    <Button
+        android:id="@+id/busAddButton"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="ADD"
+        android:textSize="16dp"
+        android:background="@drawable/rounded_edit_text"
+        app:layout_constraintBottom_toBottomOf="@+id/background1"
+        app:layout_constraintEnd_toEndOf="@+id/background1"
+        app:layout_constraintStart_toStartOf="@+id/background1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

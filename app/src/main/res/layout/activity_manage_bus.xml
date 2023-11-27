@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/titleJBus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:fontFamily="@font/cottoncandy"
+        android:text="JBus"
+        android:textColor="#00A36C"
+        android:textSize="96sp"
+
+        android:typeface="monospace" />
+
+    <RelativeLayout
+        android:id="@+id/listbg"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:layout_below="@id/buspngreg"
+        android:background="@drawable/text_bg2"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFADD"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manageBus_text"
+            android:text="Manage Bus"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/white"
+            android:background="#051650"
+            >
+        </TextView>
+        <ImageButton
+            android:id="@+id/manageBus_addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24"
+            android:background="@drawable/circle"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="260dp"
+            ></ImageButton>
+        <ListView
+            android:id="@+id/manage_Bus_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/manageBus_text"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/buspngreg"
+        android:layout_width="199dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/titleJBus"
+        app:srcCompat="@drawable/bus_clipart" />
+
+
+</RelativeLayout>
