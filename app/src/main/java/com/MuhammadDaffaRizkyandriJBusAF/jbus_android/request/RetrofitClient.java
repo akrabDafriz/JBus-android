@@ -1,5 +1,17 @@
 package com.MuhammadDaffaRizkyandriJBusAF.jbus_android.request;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParseException;
+
+import java.lang.reflect.Type;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
@@ -11,7 +23,7 @@ public class RetrofitClient {
             retrofit = new Retrofit.Builder()
                     .client(okHttpClient())
                     .baseUrl(baseUrl)
-                    .addConverterFactory(GsonConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create(getCustomGson()))
                     .build();
         }
         return retrofit;
@@ -21,10 +33,16 @@ public class RetrofitClient {
                 .addNetworkInterceptor(chain -> {
                     Request originalRequest = chain.request();
                     Request newRequest = originalRequest.newBuilder()
-                            .addHeader("Akrab-Dafriz", "changemepls")
+//ganti value header di bawah ini dengan nama kalian
+                            .addHeader("Client-Name", "MuhammadDaffaRizkyandri")
                             .build();
                     return chain.proceed(newRequest);
                 })
                 .build();
+    }
+    private static Gson getCustomGson() {
+        return new GsonBuilder()
+                .setDateFormat("MMMM dd, yyyy hh:mm:ss")
+                .create();
     }
 }

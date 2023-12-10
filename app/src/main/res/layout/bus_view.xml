@@ -8,7 +8,7 @@
     tools:ignore="UselessParent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewX"
         android:layout_width="84dp"
         android:layout_height="60dp"
         android:background="@drawable/bus_clipart"
@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/bus_text_view"
+            android:id="@+id/bus_name_busMainView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

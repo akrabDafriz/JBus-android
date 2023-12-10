@@ -27,7 +27,7 @@
         android:layout_height="400dp"
         android:gravity="center"
         android:layout_below="@id/buspngreg"
-        android:background="@drawable/text_bg2"
+        android:background="@drawable/rounded_edit_text"
         android:layout_marginLeft="56dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
@@ -38,22 +38,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/manageBus_text"
             android:text="Manage Bus"
+            android:gravity="center_horizontal"
             android:textStyle="bold"
             android:textSize="23dp"
-            android:paddingLeft="5dp"
-            android:textColor="@color/white"
-            android:background="#051650"
+            android:paddingTop="7dp"
+            android:textColor="@color/black"
+            android:background="#00000000 "
             >
         </TextView>
-        <ImageButton
-            android:id="@+id/manageBus_addButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_add_24"
-            android:background="@drawable/circle"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="260dp"
-            ></ImageButton>
+
         <ListView
             android:id="@+id/manage_Bus_ListView"
             android:layout_width="match_parent"
@@ -73,6 +66,28 @@
         android:layout_marginTop="5dp"
         android:layout_below="@id/titleJBus"
         app:srcCompat="@drawable/bus_clipart" />
-
+    <Button
+        android:id="@+id/manageBus_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:background="@drawable/rounded_edit_text"
+        android:text="Add a bus"
+        android:textStyle="bold"
+        android:backgroundTint="#4682B4"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/listbg"
+        ></Button>
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4682B4"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </RelativeLayout>

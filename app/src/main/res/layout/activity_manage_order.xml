@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ManageOrderActivity">
+
+    <TextView
+        android:id="@+id/manage_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Manage Orders for your Bus"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="#00A36C"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/m_order_bg"
+        android:layout_width="398dp"
+        android:layout_height="688dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manage_order_title"
+        app:srcCompat="@drawable/rounded_edit_text" />
+
+    <ListView
+        android:id="@+id/manage_order_list"
+        android:layout_width="378dp"
+        android:layout_height="671dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/m_order_bg"
+        app:layout_constraintStart_toStartOf="@+id/m_order_bg"
+        app:layout_constraintTop_toBottomOf="@+id/manage_order_title" />
+
+    <Button
+        android:id="@+id/backButton_mOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4682B4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

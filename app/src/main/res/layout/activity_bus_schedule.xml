@@ -4,6 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".BusScheduleActivity">
+
+    <TextView
+        android:id="@+id/titleJBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/cottoncandy"
+        android:text="JBus"
+        android:textColor="#00A36C"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="167dp"
+        android:layout_height="51dp"
+        app:layout_constraintEnd_toEndOf="@+id/dateEdit"
+        app:layout_constraintStart_toStartOf="@+id/dateEdit"
+        app:layout_constraintTop_toTopOf="@+id/dateEdit"
+        app:srcCompat="@drawable/rounded_edit_text" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="167dp"
+        android:layout_height="51dp"
+        app:layout_constraintEnd_toEndOf="@+id/timeEdit"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="@+id/timeEdit"
+        app:layout_constraintTop_toTopOf="@+id/timeEdit"
+        app:srcCompat="@drawable/rounded_edit_text" />
+
+    <TextView
+        android:id="@+id/addScheduleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Add bus schedule"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/dateEdit"
+        android:layout_width="153dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="number"
+
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/dateText" />
+
+    <EditText
+        android:id="@+id/timeEdit"
+        android:layout_width="153dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/timeText"
+        app:layout_constraintTop_toTopOf="@+id/timeText" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Date:"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/addScheduleTitle"
+        app:layout_constraintTop_toBottomOf="@+id/addScheduleTitle" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Time:"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/dateText" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="380dp"
+        android:layout_height="335dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleJBus"
+        app:srcCompat="@drawable/rounded_edit_text" />
+
+    <ListView
+        android:id="@+id/schedule_list"
+        android:layout_width="364dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="125dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="Bus Schedule"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/titleJBus"
+        app:layout_constraintStart_toStartOf="@+id/titleJBus"
+        app:layout_constraintTop_toBottomOf="@+id/titleJBus" />
+
+    <Button
+        android:id="@+id/add_schedule_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edit_text"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4682B4"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/refreshButton_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4682B4"
+        android:text="Refresh"
+        app:layout_constraintStart_toStartOf="@+id/schedule_list"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

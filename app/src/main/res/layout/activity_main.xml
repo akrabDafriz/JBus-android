@@ -7,6 +7,15 @@
     android:background="@drawable/bg"
     tools:context=".LoginActivity">
 
+    <Button
+        android:id="@+id/refreshButton_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:backgroundTint="#4682B4"
+        android:layout_marginTop="590dp"
+        android:layout_marginLeft="150dp"
+        />
     <TextView
         android:id="@+id/titleJBus"
         android:layout_width="match_parent"
@@ -90,6 +99,15 @@
         android:layout_marginTop="5dp"
         android:layout_below="@id/titleJBus"
         app:srcCompat="@drawable/bus_clipart" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4682B4"
+        android:text="Back" />
 
 
 </RelativeLayout>

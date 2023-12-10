@@ -7,13 +7,12 @@
     android:orientation="horizontal"
     tools:ignore="UselessParent">
 
-
     <TextView
         android:id="@+id/bus_name_busMainView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:gravity="bottom|left"
         android:hint="Bus"
         android:textColor="@android:color/black"
@@ -23,28 +22,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlHardcoded" />
 
-    <Button
-        android:id="@+id/calendar_button"
-        android:layout_width="30dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/white"
-        android:drawableTop="@drawable/baseline_calendar_month_24"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/departure_text_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="30dp"
         android:text="from:"
         android:textColor="@color/black"
         android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/calendar_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/bus_name_busMainView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

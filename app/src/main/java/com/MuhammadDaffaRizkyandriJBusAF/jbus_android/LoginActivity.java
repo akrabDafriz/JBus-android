@@ -12,8 +12,13 @@ import android.widget.Toast;
 
 import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.model.Account;
 import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.model.BaseResponse;
+import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.model.Bus;
+import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.model.Payment;
 import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.request.BaseApiService;
 import com.MuhammadDaffaRizkyandriJBusAF.jbus_android.request.UtilsApi;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     private TextView registerNow =null;
     private Button loginButton = null;
     public static Account loggedAccount;
+    public static List<Payment> paymentList = new ArrayList<>();
+    public static Bus currentBus = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                 // if success finish this activity (back to login activity)
                 if (res.success) {
                     loggedAccount = res.payload;
-                    moveActivity(getApplicationContext(), MainActivity.class);
+                    moveActivity(mContext, MainActivity.class);
                     email.setText("");
                     password.setText("");
                     viewToast(mContext, "Berhasil Login, Welcome to JBus");

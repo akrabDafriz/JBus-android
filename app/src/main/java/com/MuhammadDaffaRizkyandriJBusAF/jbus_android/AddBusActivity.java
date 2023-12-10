@@ -49,6 +49,7 @@ public class AddBusActivity extends AppCompatActivity {
     private EditText busName, busCapacity, busPrice;
     private List<Facility> selectedFacilities = new ArrayList<>();
     private Button addBus;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,11 @@ public class AddBusActivity extends AppCompatActivity {
         lunchCheckBox = findViewById(R.id.lunch_checkbox);
         baggageCheckBox = findViewById(R.id.large_baggage_checkbox);
         electricCheckBox = findViewById(R.id.electric_socket_checkbox);
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v->{
+            moveActivity(mContext, LoginActivity.class);
+        });
 
 
         ArrayAdapter adBus = new ArrayAdapter(this, android.R.layout.simple_list_item_1, busType);
@@ -203,7 +209,6 @@ public class AddBusActivity extends AppCompatActivity {
                 if (res.success) {
                     moveActivity(mContext, ManageBusActivity.class);
                     overridePendingTransition(0,0);
-                    moveActivity(getApplicationContext(), ManageBusActivity.class);
                     overridePendingTransition(0,0);
                 }
                 Toast.makeText(mContext, res.message, Toast.LENGTH_SHORT).show();

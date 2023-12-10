@@ -28,6 +28,8 @@ public class AboutMeActivity extends AppCompatActivity {
     private ImageView textBG1, textBG2;
     private Button topUpButton = null;
     private Button manageBus;
+    private Button backButton;
+    private Button manageOrder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,16 @@ public class AboutMeActivity extends AppCompatActivity {
         textBG1 = findViewById(R.id.textBG1);
         textBG2 = findViewById(R.id.textBG2);
         manageBus = findViewById(R.id.manage_Bus);
+        manageOrder = findViewById(R.id.manage_order_button);
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v->{
+            moveActivity(mContext, MainActivity.class);
+        });
 
         TextView initial = findViewById(R.id.initial);
-        initial.setText(""+LoginActivity.loggedAccount.name.charAt(0));
+        String inisial = ""+LoginActivity.loggedAccount.name.charAt(0);
+        initial.setText(inisial);
 
         TextView accountUsername = findViewById(R.id.acc_username);
         accountUsername.setText(LoginActivity.loggedAccount.name);
@@ -60,13 +69,16 @@ public class AboutMeActivity extends AppCompatActivity {
             textBG1.setVisibility(View.GONE);
             renterRegistered.setVisibility(View.GONE);
             manageBus.setVisibility(View.GONE);
+            manageOrder.setVisibility(View.GONE);
         }
         else{
             textBG2.setVisibility(View.GONE);
             registerRenter.setVisibility(View.GONE);
             renterNotRegistered.setVisibility(View.GONE);
         }
-
+        manageOrder.setOnClickListener(v->{
+            moveActivity(mContext, ManageOrderActivity.class);
+        });
         topUpButton.setOnClickListener(v->{
             handleTopUp();
         });
@@ -102,9 +114,7 @@ public class AboutMeActivity extends AppCompatActivity {
                 if(res.success) {
                     finish();
                     overridePendingTransition(0, 0);
-
                     LoginActivity.loggedAccount.balance += res.payload.doubleValue();
-
                     startActivity(getIntent());
                     overridePendingTransition(0, 0);
                 }

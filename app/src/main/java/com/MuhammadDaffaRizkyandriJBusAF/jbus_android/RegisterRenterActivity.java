@@ -49,9 +49,9 @@ public class RegisterRenterActivity extends AppCompatActivity {
     }
     protected void handleRegisterRenter() {
         // handling empty field
-        String companyNameS = companyName.toString();
-        String addressS = address.toString();
-        String phoneNumberS = phoneNumber.toString();
+        String companyNameS = companyName.getText().toString();
+        String addressS = address.getText().toString();
+        String phoneNumberS = phoneNumber.getText().toString();
 
         if (companyNameS.isEmpty() | addressS.isEmpty() | phoneNumberS.isEmpty()) {
             viewToast(mContext, "Field cannot be empty");

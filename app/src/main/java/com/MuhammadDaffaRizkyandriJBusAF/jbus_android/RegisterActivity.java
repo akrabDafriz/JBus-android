@@ -22,6 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
     private BaseApiService mApiService;
     private Context mContext;
     private EditText name, email, password;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
         email = findViewById(R.id.register_email);
         password = findViewById(R.id.register_password);
         registerButton = findViewById(R.id.registerButton);
+
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v->{
+            moveActivity(mContext, LoginActivity.class);
+        });
 
         registerButton.setOnClickListener(v->{
             handleRegister();

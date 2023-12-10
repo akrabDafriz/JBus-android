@@ -35,11 +35,11 @@
 
     <ImageView
         android:id="@+id/background1"
-        android:layout_width="354dp"
+        android:layout_width="380dp"
         android:layout_height="597dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/addBusSubTitle"
-        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="@+id/addBusTitle"
         app:layout_constraintTop_toBottomOf="@+id/addBusSubTitle"
         app:srcCompat="@drawable/text_bg" />
@@ -50,12 +50,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Bus Name"
+        android:inputType="text"
         android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addBusSubTitle" />
 
@@ -87,8 +87,8 @@
 
     <ImageView
         android:id="@+id/departureVector"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         app:layout_constraintEnd_toEndOf="@+id/busVector"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/busVector"
@@ -99,28 +99,29 @@
         android:id="@+id/busTypeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Bus Type"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/background1"
         app:layout_constraintTop_toBottomOf="@+id/bus_price" />
 
     <ImageView
         android:id="@+id/busVector"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/busTypeText"
         app:layout_constraintTop_toTopOf="@+id/busTypeText"
         app:srcCompat="@drawable/baseline_directions_bus_24" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="126dp"
+        android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
+        android:scrollbarSize="@dimen/material_emphasis_medium"
         app:layout_constraintStart_toEndOf="@+id/busVector"
         app:layout_constraintTop_toTopOf="@+id/busVector" />
 
@@ -131,13 +132,13 @@
         android:layout_marginTop="15dp"
         android:text="Departure"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/busTypeText"
         app:layout_constraintTop_toBottomOf="@+id/busTypeText" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="126dp"
+        android:layout_width="250dp"
         android:layout_height="30dp"
         app:layout_constraintStart_toStartOf="@+id/spinner"
         app:layout_constraintTop_toTopOf="@+id/departureVector" />
@@ -149,21 +150,21 @@
         android:layout_marginTop="15dp"
         android:text="Arrival"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/departureText"
         app:layout_constraintTop_toBottomOf="@+id/departureText" />
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="126dp"
+        android:layout_width="250dp"
         android:layout_height="30dp"
         app:layout_constraintStart_toStartOf="@+id/spinner2"
         app:layout_constraintTop_toTopOf="@+id/arrivalVector" />
 
     <ImageView
         android:id="@+id/arrivalVector"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         app:layout_constraintEnd_toEndOf="@+id/departureVector"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/departureVector"
@@ -193,8 +194,8 @@
         android:id="@+id/ac_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:text="AC"
         app:layout_constraintStart_toStartOf="@+id/background1"
         app:layout_constraintTop_toBottomOf="@+id/facilitiesText" />
@@ -219,7 +220,7 @@
         android:id="@+id/wifi_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="88dp"
         android:text="WiFi"
         app:layout_constraintStart_toEndOf="@+id/ac_checkbox"
         app:layout_constraintTop_toTopOf="@+id/ac_checkbox" />
@@ -236,7 +237,7 @@
         android:id="@+id/toilet_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="72dp"
         android:text="Toilet"
         app:layout_constraintStart_toEndOf="@+id/wifi_checkbox"
         app:layout_constraintTop_toTopOf="@+id/wifi_checkbox" />
@@ -260,5 +261,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/background1"
         app:layout_constraintEnd_toEndOf="@+id/background1"
         app:layout_constraintStart_toStartOf="@+id/background1" />
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#4682B4"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

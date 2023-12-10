@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".BusDetailActivity">
+
+    <TextView
+        android:id="@+id/titleJBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/cottoncandy"
+        android:text="JBus"
+        android:textColor="#00A36C"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bus_detail_title"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/cottoncandy"
+        android:gravity="center"
+        android:text="Bus Details"
+        android:textColor="#00A36C"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/titleJBus"
+        app:layout_constraintStart_toStartOf="@+id/titleJBus"
+        app:layout_constraintTop_toBottomOf="@+id/titleJBus" />
+
+    <ImageView
+        android:id="@+id/detail_bg"
+        android:layout_width="384dp"
+        android:layout_height="532dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bus_detail_title"
+        app:srcCompat="@drawable/rounded_edit_text" />
+
+    <TextView
+        android:id="@+id/bus_name_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Name"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/detail_bg"
+        app:layout_constraintTop_toTopOf="@+id/detail_bg" />
+
+    <TextView
+        android:id="@+id/facilities_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cottoncandy"
+        android:text="Facilities"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/bus_name_detail"
+        app:layout_constraintTop_toBottomOf="@+id/bus_name_detail" />
+
+    <TextView
+        android:id="@+id/price_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Price"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/facilities_detail"
+        app:layout_constraintTop_toBottomOf="@+id/facilities_detail" />
+
+    <TextView
+        android:id="@+id/capacity_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Capacity"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/price_detail"
+        app:layout_constraintTop_toBottomOf="@+id/price_detail" />
+
+    <TextView
+        android:id="@+id/bus_type_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="BusType"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/capacity_detail"
+        app:layout_constraintTop_toBottomOf="@+id/capacity_detail" />
+
+    <TextView
+        android:id="@+id/departure_station_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Departure"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/bus_type_detail"
+        app:layout_constraintTop_toBottomOf="@+id/bus_type_detail" />
+
+    <TextView
+        android:id="@+id/arrival_station_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Arrival"
+        android:fontFamily="@font/cottoncandy"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/departure_station_detail"
+        app:layout_constraintTop_toBottomOf="@+id/departure_station_detail" />
+
+    <Spinner
+        android:id="@+id/schedule_spinner_detail"
+        android:layout_width="353dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/arrival_station_detail"
+        app:layout_constraintTop_toBottomOf="@+id/arrival_station_detail" />
+
+    <Button
+        android:id="@+id/make_booking_button"
+        android:layout_width="165dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/rounded_edit_text"
+        android:backgroundTint="#4682B4"
+        android:text="Book a ticket"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_bg"
+        app:layout_constraintEnd_toEndOf="@+id/detail_bg"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/detail_bg" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4682B4"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scheduleIsEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/captainmeredith"
+        android:text="There are no schedules for this Bus\nYou cannot book a ticket for this Bus"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/detail_bg"
+        app:layout_constraintStart_toStartOf="@+id/detail_bg"
+        app:layout_constraintTop_toTopOf="@+id/schedule_spinner_detail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
